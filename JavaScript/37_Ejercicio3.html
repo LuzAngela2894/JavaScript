@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3</title>
+  </head>
+  <body>
+    <h1>Ejercicio 3</h1>
+    <script>
+      /*
+         9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+         10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
+         11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
+         */
+      console.log("Ejercicio 3.9");
+      const aleatorio = () =>
+        console.info(Math.round(Math.random() * 100 + 500));
+      aleatorio();
+
+      console.log("Ejercicio 3.10");
+      const capicua = (numero = 0) => {
+        if (!numero) return console.warn("No has ingresado ningún número");
+        if (typeof numero !== "number")
+          return console.error(
+            `El valor "${numero}" ingresado, NO es un número`
+          );
+        let alreves = numero.toString().split("").reverse().join("");
+        return numero.toString() === alreves
+          ? console.info(true + ` El número ${numero} SI es capicúa`)
+          : console.info(false + ` El número ${numero} NO es capicúa`);
+      };
+      capicua();
+      capicua("28");
+      capicua(2002);
+      capicua(800);
+      capicua(212.212);
+      
+      console.log("Ejercicio 3.11");
+      const factorial = (numero = undefined) => {
+        if (numero === undefined)
+          return console.warn("No has ingresado ningún número");
+        if (typeof numero !== "number")
+          return console.error(
+            `El valor "${numero}" ingresado, NO es un número`
+          );
+        if (numero === 0) return console.error("El número no puede ser 0");
+        if (Math.sign(numero) === -1)
+          return console.error("El número no puede ser negativo");
+        let producto = 1;
+        for (let i = 1; i <= numero; i++) {
+          producto = producto * i;
+        }
+        return console.info(`El factorial de ${numero} es ${producto}`);
+      };
+      factorial();
+      factorial("8");
+      factorial(0);
+      factorial(-5);
+      factorial(5);
+      factorial(8);
+    </script>
+  </body>
+</html>

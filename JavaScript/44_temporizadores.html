@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temporizadores</title>
+  </head>
+  <body>
+    <h1>Temporizadores</h1>
+    <script>
+      console.log("inicio");
+      let temporizador = setTimeout(() => {
+        console.log("Ejecutando un setTimeout, esto se ejecuta una sola vez");
+      }, 1000);
+      let intervalo = setInterval(() => {
+        console.log(
+          "Ejecutando un setInterval, esto se ejecuta indefinidamente cada cierto intervalo de tiempo"
+        );
+      }, 1000);
+      let time = setInterval(() => {
+        console.log(new Date().toLocaleTimeString());
+      }, 1000);
+      clearTimeout(temporizador);
+      clearInterval(intervalo);
+      clearInterval(time);
+    </script>
+  </body>
+</html>
