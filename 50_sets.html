@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sets</title>
+  </head>
+  <body>
+    <h1>Sets</h1>
+    <script>
+      const set = new Set([
+        1,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        true,
+        false,
+        false,
+        {},
+        {},
+        "hola",
+        "HOLA",
+      ]);
+      console.log(set);
+      console.log(set.size);
+
+      const set2 = new Set();
+      set2.add(1);
+      set2.add(2);
+      set2.add(2);
+      set2.add(3);
+      set2.add(true);
+      set2.add(false);
+      set2.add({});
+      console.log(set2);
+      console.log(set2.size);
+
+      console.log("Recorriendo set");
+      for (item of set) {
+        console.log(item);
+      }
+
+      console.log("Recorriendo set2");
+      set2.forEach((item) => console.log(item));
+
+      console.log("Convirtiendo set a un arreglo para acceder a posición");
+      let arreglo = Array.from(set);
+      console.log(arreglo);
+      console.log(arreglo[8]);
+
+      set.delete("HOLA");
+      console.log(set);
+
+      console.log(set.has("hola"));
+      console.log(set.has(19));
+
+      set2.clear();
+      console.log(set2);
+    </script>
+  </body>
+</html>

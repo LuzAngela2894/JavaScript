@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos</title>
+  </head>
+  <body>
+    <h1>Objetos</h1>
+    <script>
+      let a = new String("Hola");
+      console.log(a);
+      const b = {};
+      console.log(b);
+      const c = new Object();
+      console.log(c);
+      /*Dentro de un objeto a las variables se le van a llamar 
+      atributos/propiedades y a las funciones se las llama métodos*/
+      const jon = {
+        nombre: "Jon",
+        apellido: "MirCha",
+        edad: 36,
+        pasatiempos: ["Correr", "Hacer Ejercicio", "Dar Clases"],
+        soltero: false,
+        contacto: {
+          email: "jonmircha@gmail.com",
+          twitter: "@jonmircha",
+          movil: "5215512345678",
+        },
+        saludar: function () {
+          console.log(`Hola :)`);
+        },
+        decirMiNombre: function () {
+          console.log(
+            `Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.twitter} en Twitter.`
+          );
+        },
+      };
+      console.log(jon);
+      console.log(jon["pasatiempos"]);
+      console.log(jon["saludar"]);
+      console.log(jon.pasatiempos);
+      console.log(jon.pasatiempos[1]);
+      console.log(jon.saludar);
+      console.log(jon.contacto);
+      console.log(jon.contacto.twitter);
+      jon.saludar();
+      jon.decirMiNombre();
+      console.log(Object.keys(jon));
+      console.log(Object.values(jon));
+      console.log(jon.hasOwnProperty("nombre"));
+      console.log(jon.hasOwnProperty("nacimiento"));
+    </script>
+  </body>
+</html>

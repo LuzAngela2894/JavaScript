@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuración</title>
+  </head>
+  <body>
+    <h1>Destructuración</h1>
+    <script>
+      const numeros = [1, 2, 3];
+      const [one, two, three] = numeros;
+      console.log(one, two, three);
+      let persona = {
+        nombre: "Jon",
+        apellido: "MirCha",
+        edad: 35,
+      };
+      let { nombre, apellido, edad } = persona;
+      console.log(nombre, apellido, edad);
+    </script>
+  </body>
+</html>

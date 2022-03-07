@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Functions</title>
+  </head>
+  <body>
+    <h1>Arrow Functions</h1>
+    <script>
+      const arrowfunction = () => console.log("Esto es una arrow function");
+      arrowfunction();
+      const saludar = (nombre) => console.log(`Hola ${nombre}`);
+      saludar("Irma");
+      const sumar = (a, b) => a + b;
+      console.log(sumar(9, 9));
+      const funcionDeVariasLineas = () => {
+        console.log("Uno");
+        console.log("Dos");
+        console.log("Tres");
+      };
+      funcionDeVariasLineas();
+      const numeros = [1, 2, 3, 4, 5];
+      numeros.forEach((elemento, index) =>
+        console.log(`${elemento} está en la posición ${index}`)
+      );
+      const perro = {
+        nombre: "Kenai",
+        ladrar() {
+          console.log(this.nombre);
+        },
+      };
+      perro.ladrar();
+    </script>
+  </body>
+</html>
