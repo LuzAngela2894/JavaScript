@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM: Atributos y Data-Attributes</title>
+    <style>
+      :root {
+        --blueviolet-color: #8a2be2;
+        --whitesmoke-color: #f5f5f5;
+      }
+
+      .cards {
+        border: thin solid var(--blueviolet-color);
+        padding: 1rem;
+      }
+
+      .card {
+        display: inline-block;
+        background-color: var(--blueviolet-color);
+        color: var(--whitesmoke-color);
+      }
+
+      .card figcaption {
+        padding: 1rem;
+      }
+
+      .rotate-45 {
+        transform: rotate(45deg);
+      }
+
+      .rotate-135 {
+        transform: rotate(135deg);
+      }
+
+      .opacity-80 {
+        opacity: 0.8;
+      }
+
+      .sepia {
+        filter: sepia(1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM: Atributos y Data-Attributes</h1>
+    <b><hr /></b>
+    <h3>Manejo del DOM</h3>
+    <p id="que-es">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias,
+      sapiente ipsa inventore ipsum quia aliquid blanditiis. Debitis, deleniti
+      neque fugit soluta, dolor aperiam nulla provident tenetur, adipisci ab
+      sequi ad.
+    </p>
+    <!--emmet.io plugin para escribir bloques de código html más rápido ejemplo: nav#menu>ul>li*5>a{Sección $}-->
+    <nav id="menu">
+      <ul>
+        <li><a href="">Sección 1</a></li>
+        <li><a href="">Sección 2</a></li>
+        <li><a href="">Sección 3</a></li>
+        <li><a href="">Sección 4</a></li>
+        <li><a href="">Sección 5</a></li>
+      </ul>
+    </nav>
+    <input type="text" name="nombre" placeholder="Nombre" />
+    <a
+      class="link-dom"
+      href="dom.html"
+      style="background-color: indigo; color: whitesmoke"
+      data-id="1"
+      data-description="Document Object Model"
+      >DOM</a
+    >
+    <section class="cards">
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/tech" alt="Tech" />
+        <figcaption>Tech</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/animals" alt="Animals" />
+        <figcaption>Animals</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/people" alt="People" />
+        <figcaption>People</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/arch" alt="Arch" />
+        <figcaption>Arch</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/nature" alt="Nature" />
+        <figcaption>Nature</figcaption>
+      </figure>
+    </section>
+    <script src="/68_elementos_fragmentos.js"></script>
+  </body>
+</html>
