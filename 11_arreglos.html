@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arreglos</title>
+  </head>
+  <body>
+    <h1>Arreglos</h1>
+    <script>
+      const a = [];
+      const b = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
+      console.log(a);
+      console.log(b);
+      console.log(b.length);
+      console.log(b[2]);
+      console.log(b[3][2]);
+      console.log(b[3][3][0]);
+      const c = Array.of("X", "Y", "Z", 9, 8, 7);
+      console.log(c);
+      const d = Array(10).fill(false);
+      console.log(d);
+      const colores = ["Rojo", "Verde", "Azul"];
+      colores.push("Negro");
+      colores.pop();//Quita el último elemento del arreglo
+      console.log(colores);
+      colores.forEach(function(elemento, index){
+        console.log(`<li id="${index}">${elemento}</li>`);
+      });
+    </script>
+  </body>
+</html>
